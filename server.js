@@ -86,6 +86,7 @@ app.delete('/:id', (req, res) => {
   }
 });
 
+// id에 따른 특정 data 수정
 app.put('/:id', (req, res) => {
   const id = Number(req.params.id);
   const dataIndex = datas.findIndex(f => f.id == id);
