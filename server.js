@@ -52,6 +52,8 @@ app.get('/:id', (req, res) => {
 
 // 기존 data배열에 새로운 data를 추가한다.
 app.post('/', (req, res) => {
+  // ES6 syntax : Spread Operator
+  //           { id: id         , name: name }
   const data = { id: getNextId(), ...req.body };
 
   // 기존 배열에 담긴 데이터 다음 인덱스에 데이터를 추가한다.
